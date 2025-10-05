@@ -11,10 +11,27 @@ Experimenting with deploying production-grade llms to GCP Cloud Run
 	gcloud config set project $PROJECT_ID
 	```
 
-- Set the environment variables
+## Create the GCP cloud resources
 
-	- Update the relevant `ENV` varaibles in `scripts/set_ENV.sh`
+- First you need to create the **Cloud Run** service using the avaialble platforms
+- Update `Iac/terraform.tfvars` file with your relevant `ENV` variable values
+
+	1. Create cloud resources
+
+		```ini
+		bash scripts/create_resources.sh create
+		```
+
+- Destory cloud resources when the experiments are done
 
 	```ini
-	bash scripts/set_ENV.sh
+	bash scripts/create_resources.sh destroy
 	```
+
+## Deploying Platforms
+
+In this section, we'll experiment with different deployment platforms like vLLM, Ollama, TIG, etc.
+
+### TIG Toolkit from Huggingface
+
+- Please refer this: [more details](/platforms/TGI/README.md)
