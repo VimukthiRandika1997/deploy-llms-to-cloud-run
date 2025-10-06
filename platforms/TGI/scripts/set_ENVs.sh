@@ -1,0 +1,9 @@
+export REPOSITORY_NAME=test-llm-deployment  # container-registry name
+export REPOSITORY_REGOIN=us-central1          # region
+export PROJECT_ID=<your_gcp_project_id>     # GCP project-id
+export LOCATION=us-central1 # or any location where Cloud Run offers GPUs: https://cloud.google.com/run/docs/locations#gpu
+export CONTAINER_URI=us-docker.pkg.dev/deeplearning-platform-release/gcr.io/huggingface-text-generation-inference-cu121.2-2.ubuntu2204.py310
+export SERVICE_NAME=tgi-cloud-run   # any name
+export VPC=dev-vpc
+export SUBNET=subnet-private
+export LLM_MODEL=deepseek-ai/DeepSeek-R1-Distill-Qwen-7B
